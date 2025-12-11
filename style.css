@@ -1,0 +1,123 @@
+/* Full viewport body with background */
+body {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  margin: 0;
+  background-image: url("images/no lamp saloon.jpg"); /* Adjust path */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Top row for chandelier */
+.row {
+  height: 50%;
+  width: 100%;
+}
+
+/* Bottom row for interactive buttons */
+.bottom {
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+
+/* Each square in bottom row */
+.square {
+  height: 100%;
+  width: 33.33%;
+  display: flex;
+}
+
+/* Center content helper class */
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* Images styling */
+img {
+  max-height: 100%;
+  transition: transform 0.1s ease, filter 0.1s ease;
+  cursor: pointer;
+}
+.smaller {
+  max-height: 65%;
+}
+.smaller-spit {
+  max-height: 65%;
+}
+.smaller-drink {
+  max-height: 90%;
+}
+/* Pressed animation class (added by JS) */
+.pressed {
+  transform: scale(0.95);
+  filter: brightness(75%);
+}
+
+/* Hidden image class for chandelier effect */
+.hidden-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional: hover effect for all clickable images */
+.clickable:hover {
+  transform: scale(1.05);
+  filter: brightness(100%);
+}
+
+/* Color helper classes (optional for other UI) */
+.green {
+  background-color: #008d24;
+}
+.blue {
+  background-color: #0b69c0;
+}
+.purple {
+  background-color: #3a246d;
+}
+.orange {
+  background-color: #fd5632;
+}
+.red {
+  background-color: #ca1b22;
+}
+.dark-grey {
+  background-color: #a9a9a9;
+}
+.white {
+  background-color: #ffffff;
+}
+.black {
+  background-color: #000000;
+}
+
+/* Responsive images for small screens */
+@media only screen and (max-width: 700px) {
+  body {
+    background-image: url("images/Small BG.avif");
+    display: block;
+  }
+  .bottom {
+    flex-direction: column;
+  }
+  .square {
+    width: 100%;
+    height: calc(100% / 3);
+  }
+  .bottom {
+    height: 50%;
+    width: 100%;
+    display: flex;
+  }
+  .row {
+    height: 50%;
+    width: 100%;
+  }
+  .smaller {
+    max-height: 75%;
+  }
+}

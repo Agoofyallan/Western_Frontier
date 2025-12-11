@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SuperFan Layout</title>
+  </head>
+
+  <body>
+    <!-- Top Row: Chandelier -->
+    <div class="row center-content">
+      <img
+        src="images/Chandalier.png"
+        id="break"
+        class="clickable smaller"
+        onclick="noLight(event)"
+      />
+    </div>
+
+    <!-- Bottom Row: Three interactive images -->
+    <div class="bottom center-content">
+      <div class="square center-content">
+        <img
+          src="images/Red_Cards.png"
+          id="poker"
+          class="clickable"
+          onclick="blackJack(event)"
+        />
+      </div>
+
+      <div class="square center-content">
+        <img
+          src="images/Bartender.png"
+          id="drink"
+          class="clickable smaller-drink"
+          onclick="whiskeyDrink(event)"
+        />
+      </div>
+
+      <div class="square center-content">
+        <img
+          src="images/spitton.png"
+          id="spit"
+          class="clickable smaller-spit"
+          onclick="disgusting(event)"
+        />
+      </div>
+    </div>
+
+    <!-- Audio elements -->
+
+    <audio autoplay loop>
+      <source src="Sounds/Oh!-Susanna.mp3" type="audio/mpeg" />
+    </audio>
+    <audio autoplay loop>
+      <source src="Sounds/Crowd Talking.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
